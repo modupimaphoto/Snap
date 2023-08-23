@@ -2,10 +2,56 @@
 :root {
     --almost-white: hsl(0, 0%, 98%);
     --medium-gray: hsl(0, 0%, 41%);
-    --almost-black: hsl(0, 0%, 8%);
+    --almost-black: rgb(20, 20, 20);
 }
 body {
 	font-family: 'Epilogue', sans-serif;
+}
+header li {
+    cursor: pointer;
+    color: var(--medium-gray);
+    transition: 0.6s;
+}
+header li:hover {
+    color: var(--almost-black);
+}
+.close-menu {
+    display: none;
+}
+.w-60 {
+    width: 60%;
+}
+.navbar {
+    width: 75%;
+}
+.navbar-left {
+    display: none;
+}
+.menu {
+    cursor: pointer;
+}
+.hero-header {
+    font-weight: 700;
+    font-size: 4.5em;
+    line-height: 60px;
+    color: var(--almost-black);
+}
+.hero-text {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--medium-gray);
+    line-height: 30px;
+}
+
+.btn-dark{
+    background-color: var(--almost-black)!important;
+    border-radius: 12px!important;
+    border: 2px solid var(--almost-black)!important;
+    width: 25%;
+}
+.btn-dark:hover{
+    background-color: var(--almost-white)!important;
+    color: var(--almost-black)!important;
 }
 /*
 - Mobile: 375px
@@ -20,3 +66,42 @@ body {
 - Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
 - Weights: 500, 700
 */
+@media (max-width: 551.98px) {
+    .display-none {
+        display: none;
+    }
+    .navbar-left, .navbar-right {
+        position: fixed;
+        z-index: 2;
+    }
+    .navbar-left {
+        background-color: rgba(0, 0, 0, 0.8);
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 40%;
+        height: 0;
+    }
+    .navbar-right{
+        background-color: var(--almost-white);
+        right: 0;
+        top: 0;
+        width: 60%;
+        padding-top: 40px;
+        transition: 0.6s;
+        height: 100vh;
+    }
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .navbar-active-right {
+        margin-top: -800px!important;
+    }
+    .hero-header {
+        font-size: 2.5em;
+    }
+}
