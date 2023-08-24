@@ -53,20 +53,22 @@ header li:hover {
     background-color: var(--almost-white)!important;
     color: var(--almost-black)!important;
 }
-/*
-- Mobile: 375px
-- Desktop: 1440px
-
-### Body Copy
-
-- Font size (paragraph): 18px
-
-### Font
-
-- Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
-- Weights: 500, 700
-*/
 @media (max-width: 551.98px) {
+    .logo {
+      width: 100px;
+    }
+    .menu {
+      width: 40px
+    }
+    .hero-header {
+        font-size: 2em!important;
+    }
+    .hero-text {
+        font-size: 1em;
+    }
+    .btn-dark{
+        width: 55%;
+    }
     .display-none {
         display: none;
     }
