@@ -30,6 +30,35 @@ header li:hover {
 .menu {
     cursor: pointer;
 }
+
+/* Features Dropdown */
+.features-dropdown {
+    width: 20%;
+}
+.company-dropdown, .features-dropdown{
+    padding: 10px 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px gray;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+.company-dropdown {
+  left: 15%;
+  width: 15%;
+}
+.features-dropdown p, .company-dropdown p {
+    cursor: pointer;
+    transition: 0.6s;
+    color: var(--medium-gray);
+}
+.features-dropdown p:hover, .company-dropdown p:hover {
+    color: var(--almost-black);
+}
+.features-dropdown img{
+    margin-right: 10px;
+}
 .hero-header {
     font-weight: 700;
     font-size: 4.5em;
@@ -53,13 +82,91 @@ header li:hover {
     background-color: var(--almost-white)!important;
     color: var(--almost-black)!important;
 }
-@media (max-width: 551.98px) {
+
+@media (max-width: 1199.98px) {
+  .navbar {
+      width: 70%;
+  }
+  .w-60 {
+	width: 80%;
+  }
+  .btn-dark{
+		width: 45%;
+   }
+   .features-dropdown{
+		width: 25%;
+	}
+  .company-dropdown {
+	  left: 24%;
+	  width: 20%;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar {
+      width: 65%;
+  }
+  .btn-dark{
+		width: 50%;
+   }
+   .hero-header {
+		font-size: 3em!important;
+	}
+	.hero-text {
+		font-size: 1.1em;
+	}
+   .w-60 {
+	width: 95%;
+  }
+  .features-dropdown{
+		width: 32%;
+	}
+  .company-dropdown {
+	  left: 24%;
+	  width: 25%;
+  }
+}
+@media (max-width: 811.98px) {
+	  .navbar {
+		  width: 60%;
+	  }
+	  .w-60 {
+		width: 95%;
+	  }
+	.hero-header {
+		font-size: 3em!important;
+	}
+	.hero-text {
+		font-size: 1.1em;
+	}
+	.btn-dark{
+		width: 60%;
+	}
+	.features-dropdown{
+		width: 40%;
+	}
+	.company-dropdown {
+	  left: 35%;
+	  width: 30%;
+	}
+}
+@media (max-width: 767.98px) {
     .logo {
       width: 100px;
     }
     .menu {
       width: 40px
     }
+
+    /* Features Dropdown */
+    .features-dropdown, .company-dropdown {
+        padding: 10px 25px;
+        background-color: var(--almost-white);
+        border-radius: none;
+        box-shadow: none;
+        width: 100%;
+        position:static;
+    }
+
     .hero-header {
         font-size: 2em!important;
     }
